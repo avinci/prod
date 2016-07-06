@@ -33,9 +33,9 @@ resources:
     source:
       name : "env-dr-dcl"
 
-# DR env vars for BOX
-  - name: box-dr-params
-    type: params
-    source:
-      params:
-        ENVIRONMENT: "dr-dcl"
+## DR env vars for BOX
+#  - name: box-dr-params
+#    type: params
+#    source:
+#      params:
+#        ENVIRONMENT: "dr-dcl"
