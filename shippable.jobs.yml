@@ -3,7 +3,7 @@ jobs:
   - name: box-prod-aws
     type: deploy
     steps:
-      - IN: box-test-aws
+      - IN: box-rel
         switch: off
       - IN: box-p-params
       - IN: env-prod-aws
