@@ -7,8 +7,8 @@ jobs:
         switch: off
       - IN: box-p-params
       - IN: env-prod-aws
-#      - IN: box-p-kick
 #      - IN: box-p-scaler
+#      - IN: box-p-kick
 
 ## DR deployment job for BOX
 #  - name: box-dr-dcl
