@@ -2,7 +2,7 @@ resources:
 # PROD AWS cluster
   - name: env-prod-aws
     type: cluster
-    integration: aviB-ecs
+    integration: avi-ecs
     pointer:
       sourceName : "prod-aws"
       region: "us-east-1"
