@@ -1,41 +1,41 @@
 resources:
 # PROD AWS cluster
   - name: env-prod-aws
-    type: ecsCluster
+    type: cluster
     integration: avi-ecs
-    source:
-      name : "prod-aws"
+    pointer:
+      sourceName : "prod-aws"
       region: "us-east-1"
 
 # PROD env vars for BOX
   - name: box-p-params
     type: params
-    source:
+    version:
       params:
         ENVIRONMENT: "prod-aws"
 
-# PROD replica controller for BOX
-  - name: box-p-scaler
-    type: replicas
-    source:
-      count: 3
-
-# PROD kickstarter to manually trigger deploys
-  - name: box-p-kick
-    type: kickStart
-    source:
-      counter: 3
-
-# Disaster recovery Docker Cloud cluster resource
-  - name: env-dr-dcl
-    type: dclCluster
-    integration: sd-dcl
-    source:
-      name : "env-dr-dcl"
-
-# DR env vars for BOX
-  - name: box-dr-params
-    type: params
-    source:
-      params:
-        ENVIRONMENT: "dr-dcl"
+## Disaster recovery Docker Cloud cluster resource
+#  - name: env-dr-dcl
+#    type: cluster
+#    integration: sd-dcl
+#    pointer:
+#      sourceName : "env-dr-dcl"
+#
+## DR env vars for BOX
+#  - name: box-dr-params
+#    type: params
+#    version:
+#      params:
+#        ENVIRONMENT: "dr-dcl"
+#
+## PROD replica controller for BOX
+#  - name: box-p-scaler
+#    type: replicas
+#    version:
+#      count: 3
+#
+## PROD kickstarter to manually trigger deploys
+#  - name: box-p-kick
+#    type: kickStart
+#    source:
+#      counter: 3
