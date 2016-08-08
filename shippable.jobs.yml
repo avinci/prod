@@ -4,7 +4,7 @@ jobs:
     type: deploy
     steps:
       - IN: box-test-aws
-        trigger: false
+        switch: off
       - IN: box-p-params
       - IN: env-prod-aws
 #      - IN: box-p-kick
