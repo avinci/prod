@@ -6,9 +6,9 @@ jobs:
       - IN: box-test-aws
         trigger: false
       - IN: box-p-params
-      - IN: box-p-scaler
       - IN: env-prod-aws
-      - IN: box-p-kick
+#      - IN: box-p-kick
+#      - IN: box-p-scaler
 
 ## DR deployment job for BOX
 #  - name: box-dr-dcl
