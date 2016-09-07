@@ -18,7 +18,7 @@ resources:
   - name: box-p-scaler
     type: replicas
     version:
-      count: 2
+      count: 0
 
 
 # Disaster recovery Google Container Engine cluster resource
