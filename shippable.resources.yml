@@ -35,9 +35,3 @@ resources:
     version:
       params:
         ENVIRONMENT: "dr-GKE"
-
-# PROD kickstarter to manually trigger deploys
-  - name: box-p-kick
-    type: kickStart
-    source:
-      counter: 2
