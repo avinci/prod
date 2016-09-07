@@ -1,12 +1,12 @@
 jobs:
-# PROD deployment job for BOX
-  - name: box-prod-aws
-    type: deploy
-    steps:
-      - IN: box-rel
-        switch: off
-      - IN: box-p-params
-      - IN: env-prod-aws
+## PROD deployment job for BOX
+#  - name: box-prod-aws
+#    type: deploy
+#    steps:
+#      - IN: box-rel
+#        switch: off
+#      - IN: box-p-params
+#      - IN: env-prod-aws
 #      - IN: box-p-scaler
 #      - IN: box-p-kick
 

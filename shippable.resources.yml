@@ -1,25 +1,25 @@
 resources:
-# PROD AWS cluster
-  - name: env-prod-aws
-    type: cluster
-    integration: avi-ecs
-    pointer:
-      sourceName : "prod-aws"
-      region: "us-east-1"
-
-# PROD env vars for BOX
-  - name: box-p-params
-    type: params
-    version:
-      params:
-        ENVIRONMENT: "prod-aws"
-
-# PROD replica controller for BOX
-  - name: box-p-scaler
-    type: replicas
-    version:
-      count: 3
-
+## PROD AWS cluster
+#  - name: env-prod-aws
+#    type: cluster
+#    integration: avi-ecs
+#    pointer:
+#      sourceName : "prod-aws"
+#      region: "us-east-1"
+#
+## PROD env vars for BOX
+#  - name: box-p-params
+#    type: params
+#    version:
+#      params:
+#        ENVIRONMENT: "prod-aws"
+#
+## PROD replica controller for BOX
+#  - name: box-p-scaler
+#    type: replicas
+#    version:
+#      count: 3
+#
 
 ## Disaster recovery Docker Cloud cluster resource
 #  - name: env-dr-dcl
