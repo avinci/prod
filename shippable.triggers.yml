@@ -1,0 +1,6 @@
+triggers:
+   - name: box-p-kick
+     type: trigger
+     version:
+       counter: 3
+       
