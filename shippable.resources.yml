@@ -21,23 +21,23 @@ resources:
       count: 2
 
 
-## Disaster recovery Docker Cloud cluster resource
-#  - name: env-dr-dcl
-#    type: cluster
-#    integration: sd-dcl
-#    pointer:
-#      sourceName : "env-dr-dcl"
-#
-## DR env vars for BOX
-#  - name: box-dr-params
-#    type: params
-#    version:
-#      params:
-#        ENVIRONMENT: "dr-dcl"
-#
+# Disaster recovery Google Container Engine cluster resource
+  - name: env-dr-gke
+    type: cluster
+    integration: avi-dr-gce
+    pointer:
+      sourceName : "dr-gke"
+      region: "us-east1-b"
 
-## PROD kickstarter to manually trigger deploys
-#  - name: box-p-kick
-#    type: kickStart
-#    source:
-#      counter: 3
+# DR env vars for BOX
+  - name: box-dr-params
+    type: params
+    version:
+      params:
+        ENVIRONMENT: "dr-GKE"
+
+# PROD kickstarter to manually trigger deploys
+  - name: box-p-kick
+    type: kickStart
+    source:
+      counter: 2

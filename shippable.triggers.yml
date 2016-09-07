@@ -3,4 +3,3 @@ triggers:
      type: trigger
      version:
        counter: 3
-       

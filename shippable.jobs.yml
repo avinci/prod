@@ -10,11 +10,11 @@ jobs:
       - IN: box-p-scaler
       - IN: box-p-kick
 
-## DR deployment job for BOX
-#  - name: box-dr-dcl
-#    type: dclDeploy
-#    steps:
-#      - IN: box-test-aws
-#        trigger: false
-#      - IN: box-dr-params
-#      - IN: env-dr-dcl
+# DR deployment job for BOX
+  - name: box-dr-gke
+    type: deploy
+    steps:
+      - IN: box-rel
+        switch: off
+      - IN: box-dr-params
+      - IN: env-dr-gke
