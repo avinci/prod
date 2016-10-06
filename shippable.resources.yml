@@ -1,37 +1,37 @@
 resources:
-# PROD AWS cluster
-  - name: env-prod-aws
-    type: cluster
-    integration: avi-ecs
-    pointer:
-      sourceName : "prod-aws"
-      region: "us-east-1"
-
-# PROD env vars for BOX
-  - name: box-p-params
-    type: params
-    version:
-      params:
-        ENVIRONMENT: "prod-aws"
-
-# PROD replica controller for BOX
-  - name: box-p-scaler
-    type: replicas
-    version:
-      count: 2
-
-
-# Disaster recovery Google Container Engine cluster resource
-  - name: env-dr-gke
-    type: cluster
-    integration: avi-dr-gce
-    pointer:
-      sourceName : "dr-gke"
-      region: "us-east1-b"
-
-# DR env vars for BOX
-  - name: box-dr-params
-    type: params
-    version:
-      params:
-        ENVIRONMENT: "dr-GKE"
+## PROD AWS cluster
+#  - name: env-prod-aws
+#    type: cluster
+#    integration: avi-ecs
+#    pointer:
+#      sourceName : "prod-aws"
+#      region: "us-east-1"
+#
+## PROD env vars for BOX
+#  - name: box-p-params
+#    type: params
+#    version:
+#      params:
+#        ENVIRONMENT: "prod-aws"
+#
+## PROD replica controller for BOX
+#  - name: box-p-scaler
+#    type: replicas
+#    version:
+#      count: 2
+#
+#
+## Disaster recovery Google Container Engine cluster resource
+#  - name: env-dr-gke
+#    type: cluster
+#    integration: avi-dr-gce
+#    pointer:
+#      sourceName : "dr-gke"
+#      region: "us-east1-b"
+#
+## DR env vars for BOX
+#  - name: box-dr-params
+#    type: params
+#    version:
+#      params:
+#        ENVIRONMENT: "dr-GKE"
