@@ -14,10 +14,10 @@ jobs:
 
 
 ################### DR deployment job for BOX ###################
-#  - name: box-dr-gce
-#    type: deploy
-#    steps:
-#      - IN: box-rel
-#        switch: off
-#      - IN: box-dr-params
-#      - IN: env-dr-gce
+  - name: box-dr-gce
+    type: deploy
+    steps:
+      - IN: box-rel
+        switch: off
+      - IN: box-dr-params
+      - IN: env-dr-gce

@@ -24,17 +24,17 @@ resources:
 
 
 ##################### DR Google Container Engine cluster ###################
-## DR GCE cluster
-#  - name: env-dr-gce
-#    type: cluster
-#    integration: avi-dr-gce
-#    pointer:
-#      sourceName : "dr-gce"
-#      region: "us-east1-b"
-#
-## DR env vars for BOX
-#  - name: box-dr-params
-#    type: params
-#    version:
-#      params:
-#        ENVIRONMENT: "dr-GKE"
+# DR GCE cluster
+  - name: env-dr-gce
+    type: cluster
+    integration: avi-dr-gce
+    pointer:
+      sourceName : "dr-gce"
+      region: "us-east1-b"
+
+# DR env vars for BOX
+  - name: box-dr-params
+    type: params
+    version:
+      params:
+        ENVIRONMENT: "dr-GKE"
