@@ -1,4 +1,5 @@
 resources:
+##################### PROD ON AWS ###################
 ## PROD AWS cluster
 #  - name: env-prod-aws
 #    type: cluster
@@ -19,14 +20,16 @@ resources:
 #    type: replicas
 #    version:
 #      count: 2
-#
-#
-## Disaster recovery Google Container Engine cluster resource
-#  - name: env-dr-gke
+
+
+
+##################### DR Google Container Engine cluster ###################
+## DR GCE cluster
+#  - name: env-dr-gce
 #    type: cluster
 #    integration: avi-dr-gce
 #    pointer:
-#      sourceName : "dr-gke"
+#      sourceName : "dr-gce"
 #      region: "us-east1-b"
 #
 ## DR env vars for BOX
