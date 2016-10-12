@@ -1,14 +1,25 @@
 jobs:
 ##################### PROD deployment job for BOX ###################
-#  - name: box-prod-aws
-#    type: deploy
-#    steps:
-#      - IN: box-rel
-#        switch: off
-#      - IN: box-p-params
-#      - IN: env-prod-aws
-#      - IN: box-p-scaler
-#      - IN: box-p-kick
+  - name: box-rel
+    type: release
+    steps:
+      - IN: box-ver
+      - IN: trigger-release
+      - IN: box-test-aws
+        switch: off
+      - IN: box-e2e-test
+        switch: off
+      - TASK: managed
+        bump: patch
+
+  - name: box-prod-aws
+    type: deploy
+    steps:
+      - IN: box-rel
+      - IN: box-p-params
+      - IN: env-prod-aws
+      - IN: box-p-scaler
+      - IN: box-p-kick
 
 
 
